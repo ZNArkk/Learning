@@ -7,7 +7,7 @@ int lowbit(int x) {  //二进制最小非0位
     return x & (-x);
 }
 void add(int id,int x) {  //添加操作
-    for (int i = id ; i < N ; i += lowbit(i))
+    for (int i = id ; i <= n ; i += lowbit(i))
         tree[i] += x;
 }
 int query(int x) {  //查询操作
@@ -32,4 +32,5 @@ int main() {
     return 0;  //Zk...
 }
 // Created by ZNArk on 2025/10/14.
+
 //
